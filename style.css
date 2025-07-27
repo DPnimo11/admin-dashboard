@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 4fr;
+    height: 100vh;
+}
+
+
+.sidebar {
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr 3fr;
+    gap: 0.5em;
+    color: white;
+    font-size: 50px;
+    grid-row: 1 / 3;
+    background-color: #1992d4;
+    padding: 1em;
+}
+
+.sidebar svg {
+    fill: white;
+    height: 1.2em;
+    width: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidebar ul li {
+    font-size: 40px;
+    margin: 15px 0px;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.sidebar-header {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+    align-items: center;
+    justify-items: start;
+    width: 80%;
+}
+
+.sidebar-header svg {
+    height: 1.5em;
+    width: auto;
+}
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    box-shadow: 0px 5px 10px lightgrey;
+    z-index: 1;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    padding: 5px 50px;
+    font-size: 30px;
+    justify-content: start;
+}
+
+.header-top input {
+    font-size: 25px;
+    background-color: #e2e8f0;
+    width: 65%;
+    height: 1.75em;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 12px;
+    margin-left: 30px;
+    margin-right: 150px;
+}
+
+.header-top input:focus {
+    border: none;
+    outline: none;
+}
+
+.profile-pic, .profile-pic-big {
+    background-image: url("./img/calvin\ and\ hobbes.jpg");
+    display: inline-block;
+    background-size: cover;
+    border: 2px solid black;
+}
+
+.profile-pic-big {
+    height: 110px;
+    width: 110px;
+    border-radius: 55px;
+    background-position: -10px;
+}
+
+.profile-pic {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background-position: -10px;
+    margin-left: 35px;
+    margin-right: 50px;
+}
+
+.header-top svg{
+    height: 1.25em;
+    width: auto;
+    display: inline;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    padding: 5px 50px;
+    justify-content: space-between;
+}
+
+.header-bottom > div {
+    display: inline-block;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-bottom div.greeting div:nth-of-type(1) {
+    display: block;
+    font-size: 15px;
+}
+
+.header-bottom div.greeting div:nth-of-type(2) {
+    display: block;
+    font-size: 35px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 450px;
+}
+
+.header-bottom button {
+    background-color: #1992d4;
+    color: white;
+    width: 130px;
+    height: 2em;
+    font-size: 24px;
+    border: none;
+    border-radius: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.projects {
+    display: grid;
+    background-color: #e2e8f0;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1.3fr 1fr;
+    gap: 25px;
+    padding: 30px 25px 50px 25px;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.your-projects {
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.your-projects-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.your-projects-grid > div {
+    border-left: #e3b030 solid 10px;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.your-projects-grid div.title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.your-projects-grid div.content {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight:500;
+    color: #8d8d8d;
+}
+
+.your-projects-grid svg {
+    height: 1.2em;
+    width: auto;
+    display: inline;
+    
+}
+
+.project-actions {
+    margin-left: auto;
+    margin-right: 0;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements-grid {
+    display: grid;
+    flex-grow: 1;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 25px 20px;
+    margin-top: 15px;
+}
+
+.announcements-grid > div {
+    padding: 12px;
+    font-size: 20px;
+}
+
+.announcements-grid > div > div:last-child {
+    font-size: 15px;
+    color: #8d8d8d;
+}
+
+.announcements-grid > div:nth-child(n + 2) {
+    border-top: 1px solid #8d8d8d;
+}
+
+.trending-grid, .announcements-grid, .your-projects-grid > div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-grid {
+    flex-grow: 1;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+}
+.trending-grid > div:nth-child(odd) {
+    background-image: url("./img/calvin\ and\ hobbes.jpg");
+    display: inline-block;
+    background-size: cover;
+    border: 2px solid black;
+    height: 80px;
+    width: 80px;
+    background-position: -5px;
+    border-radius: 40px;
+}
+
+.trending-grid > div:nth-child(even) {
+    justify-self: start;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.trending-grid > div:nth-child(even)> div:last-child{
+    font-size: 20px;
+    font-weight: 500;
+    color: #8d8d8d;
+}
